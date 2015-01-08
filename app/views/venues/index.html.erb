@@ -1,0 +1,10 @@
+hello
+
+<% @venues.each do |venue| %>
+	<h1><%=venue.name %></h1>
+	<p><%=venue.description %></p>
+	<ul>
+		<li><%=venue.lat %></li>
+		<li><%=venue.lon %></li>
+	</ul>
+<% end %>
