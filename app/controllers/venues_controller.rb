@@ -13,12 +13,14 @@ class VenuesController < ApplicationController
 	end
 
 	def create
-
 		venue = Venue.new
+		venue.name = params[:name]
+		venue.description = params[:description]
+		venue.lat = params[:lat]
+		venue.lon = params[:lon]
 		words = LocationService.new.lookup_coords(venue.lat, venue.lon)
 		venue.words = words.join('.')
-		
-		redirect_to('venues/new')
-
+		venue.save
+		redirect_to('/venues')
 	end
 end

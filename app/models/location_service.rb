@@ -12,7 +12,9 @@ class LocationService
     end
 
     def lookup_words(words)
+
     	@what3words.words_to_position words
+        
     end
 
 end 
