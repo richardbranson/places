@@ -1,19 +1,5 @@
 
-Add Venue
-<%= form_tag("/venues") do %>
-  <%= label_tag(:name, "Enter Name:") %>
-  <%= text_field_tag(:name) %>
-
-  <%= label_tag(:description, "Enter Description:") %>
-  <%= text_field_tag(:description) %>
-
-  <%= label_tag(:lat, "Enter Latitude:") %>
-  <%= text_field_tag(:lat) %>
-
-  <%= label_tag(:lon, "Enter Longitude:") %>
-  <%= text_field_tag(:lon) %>
-
-  <%= submit_tag("Submit") %>
-<% end %>
+<h2>Add a Venue</h2>
+<%= render partial: 'form', locals: { venue: @venue } %>
 
 <% params %>
