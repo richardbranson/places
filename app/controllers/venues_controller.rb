@@ -1,10 +1,9 @@
 class VenuesController < ApplicationController
-
+	layout 'application'	
 	def index
 
 		@venues = Venue.all
 # example:
-
 
 	end
 

@@ -1,7 +1,8 @@
-<h1>Add Venue</h1>
+
+<h1 class="">Add Venue</h1>
 <%= render partial: 'form', locals: { venue: @venue } %>
 <h1>Venues List</h1>
-<%= link_to 'Create New Venue', controller: 'venues' %>
+<%= link_to 'Create New Venue', new_venue_path %>
 <% @venues.each do |venue| %>
 	<h1><%=venue.name %></h1>
 	<p><%=venue.description %></p>
